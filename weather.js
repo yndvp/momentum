@@ -9,7 +9,8 @@ function getWeather(lat, lon) {
     }).then(function(json) {
         const temperature = json.main.temp;
         const place = json.name;
-        weather.innerText = `${temperature} @ ${place}`;
+        weather.innerText = `${temperature}°C 
+        ${place}`;
     });
 }
 

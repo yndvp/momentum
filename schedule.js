@@ -1,7 +1,7 @@
 const toDoForm = document.querySelector(".js-toDoForm"),
     toDoInput = toDoForm.querySelector("input"),
-    toDoList = document.querySelector(".js-toDoList");
-
+    toDoList = document.querySelector(".js-toDoList"),
+    today = document.querySelector("p");
 const TODO_LS = "toDos";
 
 let toDos = [];
@@ -17,6 +17,10 @@ function deleteToDo(event) {
 
     toDos = cleanToDo;
     saveToDos();
+    if(toDos.length === 0) {
+        today.innerHTML ="";
+        toDoList.style.backgroundColor = "transparent";
+    }
 }
 
 function saveToDos() {
@@ -27,8 +31,9 @@ function paintToDo(text) {
     const li = document.createElement("li");
     const delBtn = document.createElement("button");
     const span = document.createElement("span");
+    today.innerHTML = "Today's To Do";
     const newId = toDos.length + 1;
-    delBtn.innerHTML = "❌";  
+    delBtn.innerHTML = "X";  
     delBtn.addEventListener("click", deleteToDo);
     span.innerText = text;
     li.appendChild(delBtn);
@@ -47,6 +52,7 @@ function handleSubmit(event) {
     event.preventDefault();
     const currentValue = toDoInput.value;
     paintToDo(currentValue);
+    toDoList.style.backgroundColor = "#CBC0AD";
     toDoInput.value = "";
 }
 
@@ -63,6 +69,11 @@ function loadToDos() {
 function init() {
     loadToDos();
     toDoForm.addEventListener("submit", handleSubmit);
+    if(toDos.length === 0) {
+        toDoList.style.background = "transparent";
+    } else {
+        toDoList.style.backgroundColor = "#CBC0AD";
+    }
 }
 
 init();

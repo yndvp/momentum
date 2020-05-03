@@ -4,7 +4,6 @@
 .showing {
     display : block;
 }
-
 @keyframes fadeIn{
     from{
         opacity: 0;
@@ -12,7 +11,6 @@
         opacity: 1;
     }
 }
-
 .bgImage {
     position: absolute;
     top: 0;
@@ -22,3 +20,111 @@
     z-index: -1;
     animation: fadeIn 0.5s linear;
 }
+.all {
+    color: white;
+    text-align: center;
+}
+.clock {
+    font-weight: bold;
+    font-size: 2.5em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -120%);
+}
+.form {
+    color: white;
+    text-align: center;
+    font-size: 3em;
+    background-color: transparent;
+    outline: none;
+    width: 40%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+}
+.greetings {
+    letter-spacing: 2px;
+    font-family: "Brush Script MT", cursive;
+    font-size: 5em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -140%);
+}
+::placeholder {
+    color: white;
+}
+input:focus::-webkit-input-placeholder {
+    opacity: 0;
+}
+.toDo {
+    color: white;
+    text-align: center;
+    font-size: 3em;
+    background-color: transparent;
+    outline: none;
+    width: 40%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 90%);
+}
+.toDoLi {
+    color: white;
+    text-align: left;
+    list-style-type: none;
+    background-color: #CBC0AD;
+    opacity: 0.8;
+    padding: 20px;
+    position : absolute;
+    left: 20px;
+    top: 4px;
+    width: 150px;
+    border-radius: 25px;
+}
+.toDoLi p {
+    font-size: 1.3em;
+    text-align: center;
+    margin-top: 0px;
+}
+.weather {
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 30px;
+    border-radius: 100px;
+    -webkit-animation-name: movingPara;
+	-webkit-animation-duration: 4s;
+	animation-name: movingPara;
+    animation-duration: 4s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+@-webkit-keyframes movingPara {
+    0% { background-color: #7D7682; }
+    25% { background-color: #BFADB6; }
+    50% { background-color: #E5CCC7; }
+    75% { background-color: #F6E5DF; }
+    100% { background-color: #95AF96; }
+}
+@keyframes movingPara {
+    0% { background-color: #7D7682; }
+    25% { background-color: #BFADB6; }
+    50% { background-color: #E5CCC7; }
+    75% { background-color: #F6E5DF; }
+    100% { background-color: #95AF96; }
+}
+

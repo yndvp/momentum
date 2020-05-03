@@ -15,7 +15,17 @@ function handleSubmit(event) {
 
 function paintGreeting(text) {
     form.classList.add("hiding");
-    greeting.innerHTML = `Hello, ${text}`;
+    const date = new Date();
+    const hours = date.getHours();
+    if (hours < 6) {
+        greeting.innerHTML = `How's everything ${text}?`;
+    } else if (hours < 12) {
+        greeting.innerHTML = `Good morning ${text}`;
+    } else if (hours < 18) {
+        greeting.innerHTML = `Good afternoon ${text}`;
+    } else {
+        greeting.innerHTML = `Good evening ${text}`;
+    }
 }
 
 function loadName() {
