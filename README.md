@@ -8,14 +8,14 @@ Clone project of chrome extension 'momentum'. The weather, time is automatically
 - HTML5
 - CSS3
 - JavaScript ES6+
-- Weather API
+- Weather/Geolocation API
 
 ## Features
 - **Time display**
   - The time is automatically displayed and it is updated every minute
 ![](readme-img/time.png)
 
-- **Weather display**
+- **Weather/Area display**
   - If the user agrees to give permission to get geolocation info, the weather info will be displayed based on the user's geolocation
 ![](readme-img/weather.png)
 
