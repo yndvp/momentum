@@ -1,36 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Document</title>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Momentum</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
-    <script defer src="time.js"></script>
-    <script defer src="hello.js"></script>
-    <script defer src="schedule.js"></script>
-    <script defer src="background.js"></script>
-    <script defer src="weather.js"></script>
+
+    <!-- JavaScript -->
+    <script defer src="script.js"></script>
   </head>
-
   <body>
-    <div class="all">
-      <div class="js-clock clock">
-        <h1>00:00</h1>
-      </div>
-
-      <form class="js-form">
-        <input class="form" type="text" placeholder="What is your name?" />
+    <div class="weather"></div>
+    <div class="container">
+      <h1 class="time"></h1>
+      <form class="form-name">
+        <input
+          class="input-name"
+          type="text"
+          placeholder="What is your name?"
+        />
       </form>
-      <h2 class="js-greetings greetings"></h2>
-
-      <form class="js-toDoForm">
-        <input class="toDo" type="text" placeholder="Write a to do" />
+      <h2 class="greeting"></h2>
+    </div>
+    <div class="toDo">
+      <form class="form-toDo">
+        <input class="input-toDo" type="text" placeholder="Write a To Do" />
       </form>
-
-      <ul class="js-toDoList toDoLi">
-        <p></p>
-      </ul>
-
-      <span class="js-weather weather"></span>
+      <ul class="toDoLi"></ul>
     </div>
   </body>
 </html>

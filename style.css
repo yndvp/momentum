@@ -1,9 +1,73 @@
-.hiding {
-  display: none;
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Kaushan+Script&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
-.showing {
-  display: block;
+
+body {
+  color: #fff;
+  font-family: 'Arimo', sans-serif;
 }
+
+.container {
+  width: 100%;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.time {
+  font-size: 7rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+}
+
+.input-name {
+  color: #fff;
+  text-align: center;
+  font-size: 3rem;
+  background-color: transparent;
+  outline: none;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #fff;
+}
+.input-name::placeholder {
+  font-family: 'Arimo', sans-serif;
+  color: #fff;
+}
+.input-name:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.greeting {
+  font-size: 4rem;
+  font-family: 'Kaushan Script', cursive;
+}
+
+.weather {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-align: right;
+  font-size: 1.1rem;
+}
+.weather .temp {
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -12,6 +76,7 @@
     opacity: 1;
   }
 }
+
 .bgImage {
   position: absolute;
   top: 0;
@@ -21,131 +86,63 @@
   z-index: -1;
   animation: fadeIn 0.5s linear;
 }
-.all {
-  color: white;
-  text-align: center;
-}
-.clock {
-  font-weight: bold;
-  font-size: 2.5em;
+
+.toDo {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -120%);
+  top: 20px;
+  left: 20px;
+  border-radius: 25px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 12px 20px;
 }
-.form {
-  color: white;
+
+.input-toDo {
+  color: #fff;
   text-align: center;
-  font-size: 3em;
+  font-size: 1.1rem;
   background-color: transparent;
   outline: none;
-  width: 40%;
-  padding: 12px 20px;
+  padding: 5px 0;
   box-sizing: border-box;
   border: none;
   border-bottom: 2px solid white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -70%);
+  margin-bottom: 8px;
 }
-.greetings {
-  width: 100%;
-  letter-spacing: 2px;
-  font-family: "Brush Script MT", cursive;
-  font-size: 5em;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -140%);
+.input-toDo::placeholder {
+  font-family: 'Arimo', sans-serif;
+  color: #fff;
 }
-::placeholder {
-  color: white;
-}
-input:focus::-webkit-input-placeholder {
+.input-toDo:focus::-webkit-input-placeholder {
   opacity: 0;
 }
-.toDo {
-  color: white;
-  text-align: center;
-  font-size: 3em;
-  background-color: transparent;
-  outline: none;
-  width: 40%;
-  padding: 12px 20px;
-  box-sizing: border-box;
-  border: none;
-  border-bottom: 2px solid white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 90%);
-}
+
 .toDoLi {
   color: white;
   text-align: left;
   list-style-type: none;
-  background-color: #cbc0ad;
-  opacity: 0.8;
-  padding: 20px;
-  position: absolute;
-  left: 20px;
-  top: 4px;
-  width: 150px;
-  border-radius: 25px;
 }
-.toDoLi p {
-  font-size: 1.3em;
-  text-align: center;
-  margin-top: 0px;
+
+.toDoItem {
+  margin-top: 8px;
 }
-.weather {
-  color: white;
-  font-size: 1.2em;
-  font-weight: bold;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  padding: 30px;
-  border-radius: 100px;
-  -webkit-animation-name: movingPara;
-  -webkit-animation-duration: 4s;
-  animation-name: movingPara;
-  animation-duration: 4s;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
+
+.toDoLi button {
+  margin-right: 8px;
+  padding: 1px 3px;
+  cursor: pointer;
 }
-@-webkit-keyframes movingPara {
-  0% {
-    background-color: #7d7682;
-  }
-  25% {
-    background-color: #bfadb6;
-  }
-  50% {
-    background-color: #e5ccc7;
-  }
-  75% {
-    background-color: #f6e5df;
-  }
-  100% {
-    background-color: #95af96;
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 80%;
   }
 }
-@keyframes movingPara {
-  0% {
-    background-color: #7d7682;
-  }
-  25% {
-    background-color: #bfadb6;
-  }
-  50% {
-    background-color: #e5ccc7;
-  }
-  75% {
-    background-color: #f6e5df;
-  }
-  100% {
-    background-color: #95af96;
+@media (max-width: 500px) {
+  html {
+    font-size: 60%;
   }
 }

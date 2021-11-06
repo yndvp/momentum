@@ -178,10 +178,6 @@ const getToDo = function () {
     });
     toDos = cleanToDo;
     saveToDos();
-
-    // if (toDos.length === 0) {
-    //   toDoList.style.backgroundColor = 'transparent';
-    // }
   }
 
   // Save added to-do item in local storage
