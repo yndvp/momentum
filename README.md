@@ -32,4 +32,6 @@ Clone project of chrome extension 'momentum'. The weather, time is automatically
   - To do item is stored in local storage so it doesn't go away  even after reloading the page
 ![](readme-img/to-do.png)
 
+## Screenshot
+![](readme-img/screenshot.png)
 
