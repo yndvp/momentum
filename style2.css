@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Kaushan+Script&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: #fff;
+  font-family: 'Arimo', sans-serif;
+}
+
+.container {
+  width: 100%;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.time {
+  font-size: 7rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+}
+
+.input-name {
+  color: #fff;
+  text-align: center;
+  font-size: 3rem;
+  background-color: transparent;
+  outline: none;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #fff;
+}
+.input-name::placeholder {
+  font-family: 'Arimo', sans-serif;
+  color: #fff;
+}
+.input-name:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.greeting {
+  font-size: 4rem;
+  font-family: 'Kaushan Script', cursive;
+}
+
+.weather {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-align: right;
+  font-size: 1.1rem;
+}
+.weather .temp {
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: fadeIn 0.5s linear;
+}
+
+.toDo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  border-radius: 25px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 12px 20px;
+}
+
+.input-toDo {
+  color: #fff;
+  text-align: center;
+  font-size: 1.1rem;
+  background-color: transparent;
+  outline: none;
+  padding: 5px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid white;
+  margin-bottom: 8px;
+}
+.input-toDo::placeholder {
+  font-family: 'Arimo', sans-serif;
+  color: #fff;
+}
+.input-toDo:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.toDoLi {
+  color: white;
+  text-align: left;
+  list-style-type: none;
+}
+
+.toDoItem {
+  margin-top: 8px;
+}
+
+.toDoLi button {
+  margin-right: 8px;
+  padding: 1px 3px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+.show {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 80%;
+  }
+}
+@media (max-width: 500px) {
+  html {
+    font-size: 60%;
+  }
+}
