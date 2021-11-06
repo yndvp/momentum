@@ -17,7 +17,7 @@ Clone project of chrome extension 'momentum'. The weather, time is automatically
 
 - **Weather display**
   - If the user agrees to give permission to get geolocation info, the weather info will be displayed based on the user's geolocation
-![](readme-img/weather.jpg)
+![](readme-img/weather.png)
 
 - **Greetings**
   - If the user enter their name, a proper greeting that matches with time will be displayed.
